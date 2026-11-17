@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ===== Hero parallax ===== */
     const heroImg = document.querySelector('.hero-img');
     const hero = document.querySelector('.hero');
-    if (hero && window.matchMedia('(hover: hover)').matches) {
+    if (hero && heroImg && window.matchMedia('(hover: hover)').matches) {
         hero.addEventListener('mousemove', e => {
             const x = (e.clientX / window.innerWidth - 0.5);
             const y = (e.clientY / window.innerHeight - 0.5);
