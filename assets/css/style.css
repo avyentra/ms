@@ -1959,3 +1959,37 @@ a.contact-line:hover { color: #fff; }
 @media (min-width: 961px) { .hero2-inner { min-height: min(33.8vw, 520px); } }
 .hero2-desc { max-width: 31em; }
 .h2-stat { padding: 0 clamp(12px, 1.3vw, 20px); }
+
+/* wide screens: bring photo + skills card closer to the text */
+@media (min-width: 1500px) {
+    .hero2-visual { right: calc((100vw - 1180px) / 2 - 210px); }
+    .hero2-img {
+        -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 16%, #000 86%, transparent 100%), linear-gradient(180deg, #000 88%, transparent 100%);
+                mask-image: linear-gradient(90deg, transparent 0%, #000 16%, #000 86%, transparent 100%), linear-gradient(180deg, #000 88%, transparent 100%);
+    }
+}
+/* testimonial: linked reviewer name + Google tag */
+.testi-who strong a { color: inherit; border-bottom: 1px dashed rgba(255,255,255,.45); transition: border-color .3s; }
+.testi-who strong a:hover { border-bottom-color: #fff; }
+.testi-tag { display: inline-flex; align-items: center; gap: 6px; }
+.g-ico { width: 13px; height: 13px; }
+/* Upwork */
+.up-badge {
+    display: inline-grid; place-items: center;
+    width: 22px; height: 22px; border-radius: 6px;
+    background: #14a800; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: -.02em;
+}
+.btn-ghost-white:hover .up-badge { background: #14a800; color: #fff; }
+.footer-col .social-up { font-size: 13px; letter-spacing: -.02em; }
+.footer-col .social-up:hover { background: #14a800; }
+@media (min-width: 961px) {
+    .cta { gap: 28px; }
+    .cta-text h2 { white-space: nowrap; font-size: clamp(22px, 2vw, 26px); line-height: 1.3; }
+    .cta-actions { gap: 10px; flex-wrap: nowrap; }
+    .cta-actions .btn { padding: 11px 18px; font-size: 14px; white-space: nowrap; }
+    .cta-img { width: clamp(120px, 11vw, 170px); }
+}
+@media (min-width: 961px) and (max-width: 1180px) {
+    .cta { flex-wrap: wrap; row-gap: 14px; }
+    .cta-actions { flex-basis: 100%; justify-content: flex-end; }
+}
