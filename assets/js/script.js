@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ===== Service card spotlight follows mouse ===== */
-    document.querySelectorAll('.service-card, .why-card').forEach(card => {
+    document.querySelectorAll('.service-card, .why-card, .sv-card').forEach(card => {
         card.addEventListener('mousemove', e => {
             const r = card.getBoundingClientRect();
             card.style.setProperty('--mx', `${e.clientX - r.left}px`);
