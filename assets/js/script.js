@@ -5,7 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ===== Sticky header shadow ===== */
     const header = document.getElementById('header');
-    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+    const backTop = document.getElementById('backTop');
+    const onScroll = () => {
+        header.classList.toggle('scrolled', window.scrollY > 20);
+        if (backTop) backTop.classList.toggle('show', window.scrollY > 600);
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
@@ -47,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Extra elements to animate on scroll
     document.querySelectorAll('.section-head, .trusted-title, .why-title, .industries .sub-title, .testi-head')
         .forEach(el => el.classList.add('reveal-left'));
-    document.querySelectorAll('.why-item, .industry, .testi-card').forEach(el => el.classList.add('reveal'));
-    document.querySelectorAll('.cta, .footer-top').forEach(el => el.classList.add('reveal-zoom'));
+    
+    document.querySelectorAll('.cta, .footer-grid').forEach(el => el.classList.add('reveal-zoom'));
 
     const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom');
     const revealer = new IntersectionObserver((entries, obs) => {
@@ -105,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ===== Service card spotlight follows mouse ===== */
-    document.querySelectorAll('.service-card').forEach(card => {
+    document.querySelectorAll('.service-card, .why-card').forEach(card => {
         card.addEventListener('mousemove', e => {
             const r = card.getBoundingClientRect();
             card.style.setProperty('--mx', `${e.clientX - r.left}px`);
@@ -139,18 +143,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ===== Testimonial slider ===== */
     const slides = document.querySelectorAll('.testi-slide');
+    const dotsWrap = document.getElementById('testiDots');
     let current = 0;
     let timer;
+    const dots = [...slides].map((_, i) => {
+        const d = document.createElement('button');
+        d.setAttribute('aria-label', `Show testimonial ${i + 1}`);
+        const av = slides[i].querySelector('.testi-author img, .testi-author .avatar-initials');
+        if (av) d.appendChild(av.cloneNode(true));
+        if (i === 0) d.classList.add('active');
+        d.addEventListener('click', () => { show(i); auto(); });
+        dotsWrap && dotsWrap.appendChild(d);
+        return d;
+    });
     const show = next => {
+        next = (next + slides.length) % slides.length;
         if (next === current) return;
-        const old = slides[current];
-        old.classList.add('leave');
-        old.classList.remove('active');
-        setTimeout(() => old.classList.remove('leave'), 600);
-        current = (next + slides.length) % slides.length;
+        slides[current].classList.remove('active');
+        dots[current] && dots[current].classList.remove('active');
+        current = next;
         slides[current].classList.add('active');
+        dots[current] && dots[current].classList.add('active');
     };
-    const auto = () => { clearInterval(timer); timer = setInterval(() => show(current + 1), 5000); };
+    const bar = document.getElementById('testiBar');
+    const restartBar = () => {
+        if (!bar) return;
+        bar.style.transition = 'none'; bar.style.width = '0%';
+        void bar.offsetWidth;
+        bar.style.transition = 'width 5s linear'; bar.style.width = '100%';
+    };
+    const auto = () => {
+        clearInterval(timer);
+        restartBar();
+        timer = setInterval(() => { show(current + 1); restartBar(); }, 5000);
+    };
     document.getElementById('testiNext').addEventListener('click', () => { show(current + 1); auto(); });
     document.getElementById('testiPrev').addEventListener('click', () => { show(current - 1); auto(); });
     auto();
