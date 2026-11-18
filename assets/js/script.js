@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ===== Mobile menu ===== */
     const toggle = document.getElementById('menuToggle');
     const nav = document.getElementById('nav');
-    toggle.addEventListener('click', () => {
+    if (toggle && nav) toggle.addEventListener('click', () => {
         toggle.classList.toggle('open');
         nav.classList.toggle('open');
     });
-    nav.querySelectorAll('a').forEach(link => {
+    nav && nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', e => {
             const parent = link.parentElement;
             // Mobile: first tap on "Services" opens the dropdown
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ===== Active nav link on scroll ===== */
     const navLinks = document.querySelectorAll('.nav-links > li > a');
     const sections = [...navLinks]
-        .map(a => document.querySelector(a.getAttribute('href')))
+        .map(a => { const h = a.getAttribute('href') || ''; return h.startsWith('#') && h.length > 1 ? document.querySelector(h) : null; })
         .filter(Boolean);
     const spy = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -177,7 +177,11 @@ document.addEventListener('DOMContentLoaded', () => {
         restartBar();
         timer = setInterval(() => { show(current + 1); restartBar(); }, 5000);
     };
-    document.getElementById('testiNext').addEventListener('click', () => { show(current + 1); auto(); });
-    document.getElementById('testiPrev').addEventListener('click', () => { show(current - 1); auto(); });
-    auto();
+    const nextBtn = document.getElementById('testiNext');
+    const prevBtn = document.getElementById('testiPrev');
+    if (slides.length && nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', () => { show(current + 1); auto(); });
+        prevBtn.addEventListener('click', () => { show(current - 1); auto(); });
+        auto();
+    }
 });
