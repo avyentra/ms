@@ -328,3 +328,16 @@
 /* real cover images keep their full 16:9 frame */
 .b-post-cover .b-cover:not(.b-cover-auto) { aspect-ratio: 16 / 9; }
 .b-cover:not(.b-cover-auto) { background: #fff; }
+
+
+/* blog article: full 1366px container on desktop */
+.b-post-cover { max-width: none; }
+.b-post-layout { max-width: none; grid-template-columns: minmax(0, 1fr) 320px; gap: 70px; }
+.b-post-side .b-side-card:first-child { top: 100px; }
+@media (max-width: 1100px) { .b-post-layout { grid-template-columns: minmax(0, 1fr) 260px; gap: 40px; } }
+@media (max-width: 960px)  { .b-post-layout { grid-template-columns: 1fr; } }
+/* whole sidebar sticks together (TOC + CTA never overlap) */
+@media (min-width: 961px) {
+    .b-post-side { position: sticky; top: 100px; align-self: start; }
+    .b-post-side .b-side-card:first-child { position: static; }
+}
