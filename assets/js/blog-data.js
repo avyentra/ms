@@ -37,8 +37,8 @@ window.BLOG_POSTS = [
         category: "UI/UX Design",
         tags: ["Dashboard Design", "SaaS", "UX", "Data Visualization"],
         date: "2026-11-20",
-        cover: "",
-        coverAlt: "7 SaaS dashboard design mistakes and how to fix them, by Mangat Singh, UI/UX designer.",
+        cover: "assets/images/blog/saas-dashboard-design-mistakes.jpg",
+        coverAlt: "7 SaaS dashboard design mistakes and how to fix them: a clean SaaS dashboard with three KPI cards, a trend chart and bar chart, by Mangat Singh.",
         author: "Mangat Singh",
         content: `
             <p>Your team spent weeks building the dashboard. It has charts, filters, a dark mode. And yet customers log in, glance at it, and go straight to the one table they actually need. Or they export everything to Excel.</p>
