@@ -31,74 +31,89 @@ window.BLOG_POSTS = [
     {
         slug: "saas-dashboard-design-mistakes",
         title: "7 SaaS Dashboard Design Mistakes (and How to Fix Them)",
-        excerpt: "Most SaaS dashboards fail for the same few reasons. Here are seven mistakes I see often, and simple fixes you can apply before your next release.",
-        metaDescription: "7 SaaS dashboard design mistakes that hurt adoption, from too many metrics to blank empty states, and practical fixes from a working UI/UX designer.",
-        keywords: ["SaaS dashboard design mistakes", "SaaS dashboard design", "dashboard UX best practices", "dashboard empty states", "role-based dashboard", "B2B SaaS UI/UX design"],
+        excerpt: "Users ignoring your SaaS dashboard? Seven common dashboard design mistakes I keep seeing, and the simple fixes I'd make instead.",
+        metaDescription: "Users ignoring your SaaS dashboard? A designer's guide to 7 common dashboard design mistakes, with simple fixes for founders and product managers.",
+        keywords: ["dashboard design mistakes", "SaaS dashboard design", "dashboard UX best practices", "admin dashboard design", "how to design a dashboard", "KPI dashboard layout"],
         category: "UI/UX Design",
         tags: ["Dashboard Design", "SaaS", "UX", "Data Visualization"],
         date: "2026-11-20",
         cover: "",
-        coverAlt: "SaaS dashboard design mistakes and fixes by Mangat Singh, UI/UX designer.",
+        coverAlt: "7 SaaS dashboard design mistakes and how to fix them, by Mangat Singh, UI/UX designer.",
         author: "Mangat Singh",
         content: `
-            <p>The dashboard is usually the first screen your customer sees after logging in. If it confuses them, they stop logging in. They don't file a complaint. They just go quiet, and you notice it months later in your churn numbers.</p>
-            <p>I've designed a lot of web apps and admin panels over the past 8+ years, and the dashboard is almost always the hardest screen to get right. The good news: the problems repeat. Here are the seven mistakes I see most often in SaaS dashboards, and what to do instead.</p>
-            <h2>1. Starting with the data, not the decision</h2>
-            <p>This is the root of most bad dashboards. The team opens the analytics tool, sees what is already tracked, and puts all of it on screen. The result reports numbers but doesn't help anyone decide anything.</p>
-            <p>A Smashing Magazine article from August 2026 makes the same point: dashboards built from whatever data is available tend to answer no particular question, and a goal like "show how the product is performing" is too vague because it names no metric, no group of users and no action (<a href="https://smashingmagazine.com/2026/08/rethinking-data-visualisation-ux-approach-dashboards/">Smashing Magazine</a>).</p>
-            <p><strong>Fix:</strong> before any wireframe, write down the three or four decisions your user makes every week. "Which customers need a follow-up today?" is a decision. "Revenue" is not. Every widget must earn its place by helping one of those decisions.</p>
-            <h2>2. Putting everything on the first screen</h2>
-            <p>When nobody wants to say no, every team gets a widget. Soon the home screen has fourteen cards, three charts and a table, all shouting at the same volume.</p>
-            <p>The research-based guidelines collected on the Dashboard Design Patterns project say it plainly: don't overwhelm viewers, avoid visual clutter and don't add too much data (<a href="https://dashboarddesignpatterns.github.io/processguidelines.html">Dashboard Design Patterns</a>).</p>
-            <p><strong>Fix:</strong> pick a small set of headline numbers for the top row and make the most important one clearly the biggest. Move the rest one click away: a detail page, a tab or an expandable section. Fewer things on screen means each one actually gets read.</p>
-            <h2>3. One dashboard for every role</h2>
-            <p>An admin, a manager and a regular user log into the same product with very different jobs. Showing them the same screen means it's slightly wrong for everyone.</p>
-            <p>The Smashing article also warns against "fake personalisation": rescaling the same charts for different roles doesn't count. A manager needs to see who on the team needs support, while an individual needs to see their own progress (<a href="https://smashingmagazine.com/2026/08/rethinking-data-visualisation-ux-approach-dashboards/">Smashing Magazine</a>).</p>
-            <p><strong>Fix:</strong> list your roles and their top task each. Then design a different home view per role, even if they share components underneath. It's more design work up front, but it's usually the same amount of development work.</p>
-            <h2>4. Numbers without context</h2>
-            <p>"1,240 active users." Is that good? Up or down? Compared to what? A number on its own makes the user do the thinking your design should have done.</p>
-            <p>TechTarget lists missing business context, and missing guidance on how to use the data, as a common dashboard design error (<a href="https://www.techtarget.com/data-technologies/tip/10-dashboard-design-principles-and-best-practices">TechTarget</a>).</p>
-            <p><strong>Fix:</strong> give every key number a comparison (last week, last month, target) and a direction. Use colour only to mark what needs attention, and keep those colours consistent across the whole product.</p>
-            <h2>5. Picking charts because they look impressive</h2>
-            <p>Gauges, 3D pies and donut-inside-donut charts look great in a Dribbble shot. In a real product, people squint at them.</p>
-            <p>Uxcel's dashboard lesson, citing Nielsen Norman Group, notes that bar charts, line charts and scatter plots are the easiest to understand, and that the wrong chart type adds mental load (<a href="https://uxcel.com/lessons/dashboard-best-practices-876">Uxcel</a>).</p>
-            <p><strong>Fix:</strong> trends over time get a line chart. Comparing items gets a bar chart. A single important number gets a big number with a small trend line next to it. Save unusual charts for the rare case where they truly show something better.</p>
-            <h2>6. Forgetting the empty states</h2>
-            <p>Designers usually draw dashboards full of perfect sample data. But a new customer logs in to a dashboard with no data at all, and a blank chart looks broken.</p>
-            <p>One development team that cleaned up a production dashboard suggests checking every screen in four situations: the user never had data, used to have data but the current view is empty, a filter narrows results to nothing, and an integration is broken (<a href="https://dev.to/137foundry/how-we-refactored-three-empty-states-out-of-a-production-dashboard-4gef">DEV Community</a>).</p>
-            <p><strong>Fix:</strong> design each of those states on purpose. Say why the area is empty and give one clear next step, like "Connect your store" or "Clear filters". For new accounts, the empty dashboard is really your onboarding screen.</p>
-            <h2>7. Designing only for a big desktop monitor</h2>
-            <p>Your team reviews the dashboard on a large monitor. Your customer often checks it on a laptop between meetings, or on a phone on the way to work.</p>
-            <p>Bottle Rocket lists building with a desktop-first mindset, and then hastily adapting for mobile, among common SaaS UX mistakes (<a href="https://www.bottlerocketstudios.com/news-views/saas-companies-18-common-ux-mistakes-that-derail-growth">Bottle Rocket</a>).</p>
-            <p><strong>Fix:</strong> decide what the mobile version is for. It rarely needs every chart. It usually needs the headline numbers, alerts and the one or two actions people take on the go. Design that view on purpose instead of letting cards stack into a long scroll.</p>
-            <h2>A quick checklist before you ship</h2>
+            <p>Your team spent weeks building the dashboard. It has charts, filters, a dark mode. And yet customers log in, glance at it, and go straight to the one table they actually need. Or they export everything to Excel.</p>
+            <p>That's not a user problem. It's a design problem, and it's very common.</p>
+            <p>I've designed dashboards, admin panels and web apps for startups and institutions over 8+ years. Most of the dashboards I'm asked to fix have the same handful of issues. Here they are, with what I'd do instead.</p>
+            <h2>First, what is a dashboard actually for?</h2>
+            <p>Nielsen Norman Group describes a dashboard as a single-page view that gives "at-a-glance information", much like the dashboard in a car (<a href="https://www.nngroup.com/articles/dashboards-preattentive/">NN/g</a>). The same article splits them into two kinds:</p>
             <ul>
-            <li>Can you name the decision each widget supports?</li>
-            <li>Is the single most important number obvious within a few seconds?</li>
-            <li>Does each role land on a view built for its main task?</li>
-            <li>Does every key number have a comparison or target?</li>
-            <li>Are you using simple charts unless there is a clear reason not to?</li>
-            <li>Have you designed the empty, no-results and error states?</li>
-            <li>Have you checked the layout on a laptop and a phone?</li>
+            <li><strong>Operational dashboards</strong> help people act on something time-sensitive (orders stuck, a server down, tickets overdue).</li>
+            <li><strong>Analytical dashboards</strong> help people study trends and make decisions that aren't urgent.</li>
             </ul>
-            <p>And test it. Sit with three or four real users, give them a task like "find which customer needs attention today", and watch where they hesitate.</p>
-            <h2>How this played out on a real project</h2>
-            <p><strong>RBU Portal (education web app for Rayat Bahra University).</strong> A university portal has several types of users and many tasks inside one product. That is exactly the "one dashboard for every role" trap. Most of the work went into planning screens and flows so each type of user could find what they need, instead of putting every feature on one shared home screen. Rohit Sharma, the founder, shared a testimonial about the project on my website.</p>
-            <p>You can see it on <a href="https://ms.primeznews.com">ms.primeznews.com</a>.</p>
+            <p>Many dashboards fail because nobody decided which one they were building. Keep that in mind as you read the list.</p>
+            <h2>Mistake 1: Showing every metric you have</h2>
+            <p>This is the big one. The database has 40 numbers, so the dashboard shows 40 numbers.</p>
+            <p>Eleken, a design agency, points to Miller's law here: people can hold roughly "five to nine chunks of information" in working memory at once. A screen with 20 or 30 widgets makes users tune out. Their advice is to focus on 3–5 core KPIs rather than 20 line charts (<a href="https://www.eleken.co/blog-posts/why-users-ignore-dashboards">Eleken, updated Dec 2025</a>).</p>
+            <p><strong>Fix:</strong> Ask each user role one question: "What do you need to know in the first ten seconds after logging in?" Those answers become the top row. Everything else moves to a detail page.</p>
+            <h2>Mistake 2: No clear visual order</h2>
+            <p>When every card is the same size and colour, nothing stands out. The eye has nowhere to start.</p>
+            <p>Eleken notes that the top-left and centre get the most attention, and the bottom-right gets the least (<a href="https://www.eleken.co/blog-posts/why-users-ignore-dashboards">Eleken</a>). UXPin gives similar advice: put the most critical KPIs at the top or left, and separate primary metrics from secondary ones (<a href="https://www.uxpin.com/studio/blog/dashboard-design-principles/">UXPin, Jun 2026</a>).</p>
+            <p><strong>Fix:</strong> Pick one hero number per role. Make it bigger. Group related cards together, with clear spacing between groups.</p>
+            <h2>Mistake 3: Pie charts, gauges and 3D everything</h2>
+            <p>They look nice in a pitch deck. They're hard to read in daily use.</p>
+            <p>NN/g explains that our eyes compare <strong>length</strong> and <strong>position</strong> quickly and accurately, which is why bar charts and line charts work so well. The article says pie charts "should be avoided most of the time", discourages gauges and treemaps for simple actionable dashboards, and shows how 3D charts distort values (<a href="https://www.nngroup.com/articles/dashboards-preattentive/">NN/g</a>).</p>
+            <p><strong>Fix:</strong> Bar charts to compare things. Line charts to show change over time. A plain number with a small up/down indicator for single KPIs. That covers most SaaS dashboards.</p>
+            <h2>Mistake 4: Letting colour do all the work</h2>
+            <p>Red for bad, green for good, and nothing else. Two problems.</p>
+            <p>First, NN/g notes that up to 4.5% of the general population has some form of colour blindness (<a href="https://www.nngroup.com/articles/dashboards-preattentive/">NN/g</a>). Second, a rainbow of category colours turns into noise fast.</p>
+            <p><strong>Fix:</strong> Use colour for meaning, not decoration. Keep most of the screen neutral and save strong colour for things that need attention. Add labels, icons or arrows so the meaning doesn't depend on colour alone, as UXPin also recommends (<a href="https://www.uxpin.com/studio/blog/dashboard-design-principles/">UXPin</a>).</p>
+            <h2>Mistake 5: One dashboard for every user</h2>
+            <p>An admin, a team manager and a regular user don't need the same screen. When they all get one, it's either too crowded for some or too thin for others.</p>
+            <p><strong>Fix:</strong> Map your roles before designing anything. Often you need two or three tailored views, not one "flexible" dashboard with 15 filters. Filters are a sign the design didn't decide.</p>
+            <h2>Mistake 6: Forgetting the empty state and the "last updated" time</h2>
+            <p>Two small things that quietly kill trust.</p>
+            <p>A brand-new user signs up and sees a grid of zeros and empty charts. That's the worst possible first impression. Design that first screen on purpose: explain what will appear here and give one clear first action ("Connect your store", "Add your first project").</p>
+            <p>And show when the data was refreshed. Eleken notes that a visible "Last updated" timestamp can quietly reinforce reliability (<a href="https://www.eleken.co/blog-posts/why-users-ignore-dashboards">Eleken</a>). If people doubt the numbers, they stop using the dashboard and go back to spreadsheets.</p>
+            <h2>Mistake 7: Putting everything on one screen instead of drilling down</h2>
+            <p>Some teams try to fit detail tables, every chart and every filter on the home view. Then it scrolls forever.</p>
+            <p>UXPin recommends progressive disclosure: start with a high-level summary and let users expand into detail when they need it (<a href="https://www.uxpin.com/studio/blog/dashboard-design-principles/">UXPin</a>).</p>
+            <p><strong>Fix:</strong> Summary on top, click a card to see the breakdown, click a row to see the record. Three levels is usually enough.</p>
+            <p>It's also worth asking whether some of this belongs in a dashboard at all. Eleken suggests that a scheduled email summary or an alert can sometimes do the job better (<a href="https://www.eleken.co/blog-posts/why-users-ignore-dashboards">Eleken</a>). If a manager only needs one number every Monday, send it to them.</p>
+            <h2>A quick dashboard checklist</h2>
+            <p>Before you hand designs to developers, check:</p>
+            <ol>
+            <li>Each user role has a defined "first ten seconds" question.</li>
+            <li>The top row has 3–5 KPIs, not 15.</li>
+            <li>The most important number is visually the biggest.</li>
+            <li>No pie, gauge or 3D chart without a strong reason.</li>
+            <li>Colour is never the only signal.</li>
+            <li>The empty state is designed, with one clear first action.</li>
+            <li>Data freshness ("Last updated") is visible.</li>
+            <li>Detail lives one click away, not on the home screen.</li>
+            </ol>
+            <h2>How I approach this in my own projects</h2>
+            <p>In my <strong>Dashboard Design for a Project Management Web App</strong> project, the work starts with the same questions above: who opens this screen, and what they need to see first. You can see that project on my <a href="https://www.behance.net/mangat">Behance</a>.</p>
+            <p>The <strong>RBU Portal</strong>, an education web app for Rayat Bahra University, is a good example of why roles matter. A university portal serves different kinds of users, and each one comes with a different task. Planning those views separately is what keeps a portal like this usable. Rohit Sharma, the founder, shared a testimonial about the project on <a href="https://ms.primeznews.com">my website</a>.</p>
             <h2>FAQ</h2>
-            <h3>How many metrics should a SaaS dashboard show?</h3>
-            <p>There's no magic number, but the first screen should show only the few numbers tied to your user's main decisions. Everything else can live one click away.</p>
-            <h3>Should I redesign my dashboard or just fix parts of it?</h3>
-            <p>Often a focused fix is enough: cut clutter, add context to key numbers, and design the empty states. A full redesign makes sense when different roles are fighting over one screen.</p>
-            <h3>Can a designer work with my existing developers?</h3>
-            <p>Yes. I often deliver the dashboard design in Figma with components and states, and the client's own team builds it.</p>
-            <h2>Want a second pair of eyes on your dashboard?</h2>
-            <p>Send me a few screenshots of your current dashboard and tell me who uses it. I'll point out the biggest problems and how I'd fix them. No pressure either way.</p>
+            <h3>How many KPIs should a dashboard show?</h3>
+            <p>There's no fixed rule, but for the main view, 3–5 core KPIs per role is a good starting point. Put everything else on detail pages.</p>
+            <h3>Should I design the dashboard or the landing page first?</h3>
+            <p>If you already have users, start with the dashboard. That's where they spend their time and decide whether to keep paying. The landing page brings people in; the dashboard keeps them.</p>
+            <h3>Can I use a ready-made admin template?</h3>
+            <p>Yes, for internal tools it can save time. For a customer-facing SaaS product, treat the template as a component library, not as the design. The layout and the KPIs still need to come from your users' actual tasks.</p>
+            <h2>Is your dashboard being ignored?</h2>
+            <p>Send me a screenshot of your current dashboard (or a rough idea of what your product needs). I'll point out the two or three changes that would make the biggest difference, and if it makes sense, share a free first concept so you can see the direction.</p>
             <ul>
             <li>Portfolio: <a href="https://ms.primeznews.com">ms.primeznews.com</a></li>
             <li>Email: <a href="mailto:rwd.mangat@gmail.com">rwd.mangat@gmail.com</a></li>
             </ul>
             <p><em>Mangat Singh, Senior UI/UX &amp; Product Designer, Chandigarh</em></p>
+            <h2>Sources</h2>
+            <ol>
+            <li><a href="https://www.nngroup.com/articles/dashboards-preattentive/">Nielsen Norman Group: Dashboards: Making Charts and Graphs Easier to Understand (Page Laubheimer, Jun 2017)</a></li>
+            <li><a href="https://www.eleken.co/blog-posts/why-users-ignore-dashboards">Eleken: Why Users Ignore Dashboards (and What to Do Instead) (updated 22 Dec 2025; design agency)</a></li>
+            <li><a href="https://www.uxpin.com/studio/blog/dashboard-design-principles/">UXPin: Dashboard Design Principles: The Definitive Guide (updated 24 Jun 2026; design tool vendor)</a></li>
+            </ol>
         `
     },
     {
