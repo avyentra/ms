@@ -2005,3 +2005,10 @@ a.contact-line:hover { color: #fff; }
 @media (min-width: 1500px) {
     .hero2-visual { right: max(0px, calc((100vw - 1366px) / 2 - 210px)); }
 }
+
+/* ===== More work on Behance (project links row) ===== */
+.more-work { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 26px; }
+.more-work-label { font-weight: 600; font-size: 14px; color: #4c3a73; margin-right: 4px; }
+.more-work a { padding: 8px 16px; border-radius: 50px; background: #fff; border: 1px solid #e6dcfb; font-size: 13.5px; font-weight: 500; color: #2e1b55; transition: border-color .3s, color .3s, transform .3s; }
+.more-work a:hover { border-color: #a78bfa; color: var(--primary); transform: translateY(-2px); }
+.more-work a.more-work-all { background: var(--primary); border-color: transparent; color: #fff; }

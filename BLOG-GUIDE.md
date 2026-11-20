@@ -33,3 +33,9 @@ Is page mein Google ka title/description aur LinkedIn/WhatsApp share image pehle
 Share links aur sitemap mein `https://ms.primeznews.com` likha hai.
 Website kisi aur address par live ho to in files mein address badal dena:
 `sitemap.xml`, `robots.txt`, aur `ai-website-builder-vs-designer.html` (upar `<head>` mein).
+
+## Automatic tools
+- **Banner:** `python3 tools/blog-cover/make_cover.py ...` (details: `tools/blog-cover/README.md`)
+- **Blog ka apna SEO page:** `python3 tools/blog-pages/make_post_page.py <slug>`
+  Ye `<slug>.html` page, share image (`assets/images/blog/<slug>-og.jpg`), blog-data.js mein `url`
+  aur sitemap.xml ka link, sab apne aap bana deta hai. Post edit karne ke baad dobara chala do.

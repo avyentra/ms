@@ -70,9 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.15 });
     revealEls.forEach(el => revealer.observe(el));
+    // safety net: never leave content hidden if the observer does not fire (slow devices, crawlers)
+    setTimeout(() => revealEls.forEach(el => el.classList.add('in')), 2500);
 
     /* ===== Counter animation ===== */
     const counters = document.querySelectorAll('.counter');
+    // real numbers stay in the HTML (for Google / no-JS); animation starts from 0 only when it runs
     const animateCount = el => {
         const target = +el.dataset.target;
         const duration = 1600;
