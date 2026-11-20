@@ -341,3 +341,8 @@
     .b-post-side { position: sticky; top: 100px; align-self: start; }
     .b-post-side .b-side-card:first-child { position: static; }
 }
+
+/* ===== Legal pages (privacy, terms) ===== */
+.legal-wrap { padding: 50px 0 90px; }
+.b-prose.legal { max-width: 780px; }
+.b-prose.legal li + li { margin-top: .5em; }
