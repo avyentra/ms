@@ -29,6 +29,92 @@
 
 window.BLOG_POSTS = [
     {
+        slug: "how-to-choose-mlm-software-company",
+        title: "How to Choose an MLM Software Company (2026 Checklist)",
+        excerpt: "Before you sign with an MLM software vendor: check your plan is legal, know the six modules you need, and ask these questions on the demo call.",
+        metaDescription: "Choosing MLM software? Check your plan's legality, must-have modules, vendor questions and costs before you sign. A practical buyer's checklist.",
+        keywords: ["how to choose MLM software company", "MLM software development", "MLM software features", "custom MLM software cost", "direct selling rules India software", "binary unilevel matrix MLM software"],
+        category: "Software Development",
+        tags: ["MLM Software", "Direct Selling", "Custom Software", "Buyer's Guide"],
+        date: "2026-11-20",
+        cover: "assets/images/blog/how-to-choose-mlm-software-company.jpg",
+        coverAlt: "How to choose an MLM software company: a buyer's checklist covering a legal plan, six must-have modules and questions for vendors, by Mangat Singh.",
+        url: "how-to-choose-mlm-software-company.html",
+        author: "Mangat Singh",
+        content: `
+            <p>You've finalised your products and your compensation plan, and now you need software to run it all. Search "MLM software" and you'll find hundreds of vendors, all promising binary, unilevel and matrix plans, e-wallets and "200+ features".</p>
+            <p>They can't all be right for you. The wrong choice usually shows up a few months after launch, when commissions don't add up, distributors start complaining and changing platforms means migrating thousands of records.</p>
+            <p>I design and build web platforms, dashboards and mobile apps with my development team. Here is the checklist I'd use if I were choosing an MLM software partner myself.</p>
+            <h2>Step 0: make sure the plan itself is legal</h2>
+            <p>This comes before any feature list. Software can calculate a commission plan perfectly and still put you in trouble if the plan is really a pyramid scheme.</p>
+            <p>In India, the Consumer Protection (Direct Selling) Rules, 2021 prohibit direct selling companies and direct sellers from promoting pyramid schemes or money circulation schemes. The rules also ban charging entry or subscription fees, and pushing people to buy by suggesting they can earn the price back by referring others (<a href="https://pib.gov.in/PressReleasePage.aspx?PRID=1785873">PIB, Government of India</a>).</p>
+            <p>In the US, FTC staff guidance focuses on whether rewards come from real sales to real customers or from recruiting. It says there is no simple percentage test, and that selling good products doesn't by itself make a plan lawful (<a href="https://www.ftc.gov/business-guidance/resources/business-guidance-concerning-multi-level-marketing">FTC</a>).</p>
+            <p>A good development partner should ask about this before writing any code. If a vendor will build any plan you describe without a single question, treat that as a warning sign. And get your plan checked by a lawyer who knows direct selling. This post isn't legal advice.</p>
+            <h2>What MLM software actually needs to do</h2>
+            <p>Strip away the marketing and almost every platform comes down to these modules.</p>
+            <h3>1. Enrolment and genealogy</h3>
+            <p>New distributors sign up, verify their identity and get placed in the tree. Admins and distributors need a clear view of the downline. On a big network, this view becomes the most-used screen in the whole system, so it has to stay fast and easy to read.</p>
+            <h3>2. The compensation engine</h3>
+            <p>This is the heart of the system. Most vendors list binary, unilevel, matrix and hybrid plans. What matters is whether the engine calculates <strong>your</strong> plan correctly, with your ranks, bonuses, carry-forward rules and caps, at your real volume.</p>
+            <h3>3. E-wallet and payouts</h3>
+            <p>Commissions land in a wallet, then go to bank accounts or payment gateways. You need clear statements, withdrawal rules, tax deductions where they apply, and an audit trail for every rupee or dollar.</p>
+            <h3>4. E-commerce and replicated sites</h3>
+            <p>Orders should update volume, rank and commissions right away. One vendor guide makes the same point: a sale on a rep's site should update those numbers instantly, not after a nightly batch job (<a href="https://www.exigo.com/resources/blog/mlm-software-how-to-choose-a-reliable-provider/">Exigo, Aug 2026</a>).</p>
+            <h3>5. Distributor back office and mobile app</h3>
+            <p>This is what your field team sees every day: sales, team activity, rank progress, payouts and training. If it's confusing, your support inbox fills up. This is where design makes the biggest difference.</p>
+            <h3>6. Compliance features</h3>
+            <p>People often forget this one. The Indian rules list website and process requirements, and each one turns into a software feature:</p>
+            <ul>
+            <li>a grievance system that issues a ticket number for every complaint and lets consumers track it</li>
+            <li>clear return, refund and exchange information on the website</li>
+            <li>records of every direct seller, plus a published list of delisted sellers</li>
+            <li>full price display with a breakdown of charges and taxes</li>
+            </ul>
+            <p>All of these come from the same <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=1785873">PIB summary of the rules</a>. If your software doesn't support them, your team ends up handling them manually.</p>
+            <h2>Questions to ask every vendor</h2>
+            <p>Ask these on the demo call, not after you've paid a deposit:</p>
+            <ol>
+            <li><strong>Can you run a live commission calculation on a plan like ours, with realistic volume?</strong> A slide deck doesn't prove anything.</li>
+            <li><strong>Do orders, commissions and reports live in one system, or do they sync between tools?</strong> Every sync is a place where numbers can go wrong.</li>
+            <li><strong>Who owns the code and the data? What happens if we leave?</strong> Get the export format and the handover process in writing.</li>
+            <li><strong>How do you handle security and payments?</strong> Ask for specifics, not "bank-level security".</li>
+            <li><strong>Can distributors use it comfortably on a phone?</strong> Most of your field team will.</li>
+            <li><strong>What is the full cost over three years?</strong> That means setup, licence or hosting, plan changes, new features and support.</li>
+            </ol>
+            <p>The Exigo guide also recommends being careful with any vendor that won't give a realistic cost range until after a long sales process (<a href="https://www.exigo.com/resources/blog/mlm-software-how-to-choose-a-reliable-provider/">Exigo</a>).</p>
+            <h2>Ready-made platform or custom build?</h2>
+            <p><strong>A ready-made platform</strong> works when your plan is standard, you want to launch quickly and you're happy to work within the vendor's limits. You'll usually pay monthly or by volume.</p>
+            <p><strong>A custom build</strong> makes sense when your plan has rules no platform handles well, when you want full ownership of the code and data, or when the distributor experience is part of your brand. It costs more upfront, but you're not stuck with someone else's roadmap.</p>
+            <p>A middle path that often works well: start with clean designs for the distributor app and admin dashboard, test them with a few real distributors, then build on the stack that fits.</p>
+            <h2>How much does MLM software cost?</h2>
+            <p>It depends heavily on scope, so be careful with anyone who quotes one fixed number without seeing your plan. As a rough guide, Exigo notes that entry-level platforms can cost a few thousand dollars to set up, plus ongoing fees, while larger deployments need a proper scoping call (<a href="https://www.exigo.com/resources/blog/mlm-software-how-to-choose-a-reliable-provider/">Exigo</a>). Custom builds are quoted on your plan's complexity, the number of countries and currencies, and whether you need mobile apps.</p>
+            <p>For my own work, I quote per project after a short call where we go through your plan document.</p>
+            <h2>How I approach a project like this</h2>
+            <p>Two pieces from my portfolio cover the parts of MLM software that users touch most. My <strong>Dashboard Design for a Project Management Web App</strong> project is about the same problem an MLM back office has: lots of data, many roles, and a need to see what matters first. My <strong>International Money Transfer FinTech app</strong> covers wallet-style money flows on mobile. You can see both on my <a href="https://www.behance.net/mangat">Behance</a>.</p>
+            <p>On an MLM project, I start with the plan and the screens: genealogy, the distributor dashboard, wallet and admin reports. Then my team builds the engine, payments and integrations, and I stay your single point of contact until launch.</p>
+            <h2>FAQ</h2>
+            <h3>Can you build MLM software for an existing plan document?</h3>
+            <p>Yes. Send the plan document, and we'll map every rule to the commission engine before any development starts.</p>
+            <h3>Do I need a mobile app, or is a website enough?</h3>
+            <p>A responsive web back office is enough to launch. A mobile app helps when your distributors work mostly on their phones and you want push notifications for sales, rank updates and payouts.</p>
+            <h3>Can you move us off our current MLM software?</h3>
+            <p>Usually, yes, as long as you can export your distributor, order and commission history. Data migration should be planned and tested before the switch.</p>
+            <h2>Planning an MLM platform?</h2>
+            <p>Send me your compensation plan and a short note about your business. I'll reply with the questions you should settle first, a free first concept of the distributor dashboard and a rough estimate.</p>
+            <ul>
+            <li>Portfolio: <a href="https://ms.primeznews.com">ms.primeznews.com</a></li>
+            <li>Email: <a href="mailto:rwd.mangat@gmail.com">rwd.mangat@gmail.com</a></li>
+            </ul>
+            <p><em>Mangat Singh, Senior UI/UX &amp; Product Designer, Chandigarh</em></p>
+            <h2>Sources</h2>
+            <ol>
+            <li><a href="https://pib.gov.in/PressReleasePage.aspx?PRID=1785873">PIB, Government of India: Centre notifies the Consumer Protection (Direct Selling) Rules, 2021 (28 Dec 2021)</a></li>
+            <li><a href="https://www.ftc.gov/business-guidance/resources/business-guidance-concerning-multi-level-marketing">FTC: Business Guidance Concerning Multi-Level Marketing (staff guidance, updated Apr 2024)</a></li>
+            <li><a href="https://www.exigo.com/resources/blog/mlm-software-how-to-choose-a-reliable-provider/">Exigo: MLM Software: How to Choose a Reliable Network Marketing Provider (Rick Brisse, 24 Aug 2026; MLM software vendor)</a></li>
+            </ol>
+        `
+    },
+    {
         slug: "saas-dashboard-design-mistakes",
         title: "7 SaaS Dashboard Design Mistakes (and How to Fix Them)",
         excerpt: "Users ignoring your SaaS dashboard? Seven common dashboard design mistakes I keep seeing, and the simple fixes I'd make instead.",
